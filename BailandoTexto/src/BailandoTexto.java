@@ -7,13 +7,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class BailandoTexto extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField TextoIzquierda;
+	private JTextField TextoDerecha;
 
 	/**
 	 * Launch the application.
@@ -36,61 +37,74 @@ public class BailandoTexto extends JFrame {
 	 */
 	public BailandoTexto() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 730, 277);
+		setBounds(100, 100, 499, 277);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(20, 36, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		//Aqui indico el nombre y tipo de "caja" creada
+		TextoIzquierda = new JTextField();
+		//Aqui indico las medidads de la caja IZQUIERDA
+		TextoIzquierda.setBounds(24, 79, 130, 20);
+		contentPane.add(TextoIzquierda);
+		TextoIzquierda.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(231, 83, 86, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		//Aqui indico el nombre y tipo de "caja" creada
+		TextoDerecha = new JTextField();
+		//Aqui indico las medidads de la caja DERECHA
+		TextoDerecha.setBounds(311, 79, 130, 20);
+		contentPane.add(TextoDerecha);
+		TextoDerecha.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(422, 128, 86, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		//le he colocado un Jlabel como titulo de la "caja"
+		JLabel LABELTextoIzquierda = new JLabel("Texto Izquierda");
+		//Medidas del titulo de la "caja"
+		LABELTextoIzquierda.setBounds(24, 64, 93, 14);
+		contentPane.add(LABELTextoIzquierda);
 		
-		JLabel LABELhueco1 = new JLabel("Hueco1");
-		LABELhueco1.setBounds(38, 21, 46, 14);
-		contentPane.add(LABELhueco1);
 		
-		JLabel LABELhueco2 = new JLabel("Hueco2");
-		LABELhueco2.setBounds(255, 67, 46, 14);
-		contentPane.add(LABELhueco2);
-		
-		JLabel LABELhueco3 = new JLabel("Hueco3");
-		LABELhueco3.setBounds(442, 114, 46, 14);
-		contentPane.add(LABELhueco3);
+		//le he colocado un Jlabel como titulo de la "caja"
+		JLabel LABELTextoDerecha = new JLabel("Texto Derecha");
+		//Medidas del titulo de la "caja"
+		LABELTextoDerecha.setBounds(311, 64, 78, 14);
+		contentPane.add(LABELTextoDerecha);
 		
 		JButton BOTON1 = new JButton("Click aqui >>");
-		BOTON1.setBounds(73, 82, 109, 23);
+		BOTON1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//si apreto el boton con el Jlabel "Me llevo a la derecha" lo pasara a la caja de la derecha
+				TextoDerecha.setText(TextoIzquierda.getText());	
+				// con este comando cuando lo pase a la caja de la derecha borrara el texto de la izquierda para que solo lo presente en el texto derecho
+				TextoIzquierda.setText("");
+			}
+		});
+		//Boton y sus medidas
+		BOTON1.setBounds(158, 27, 109, 23);
 		contentPane.add(BOTON1);
 		
-		JLabel LABELboton1 = new JLabel("me llevo el texto al 2");
-		LABELboton1.setBounds(73, 67, 109, 14);
+		JLabel LABELboton1 = new JLabel("Me llevo a la derecha");
+		LABELboton1.setBounds(158, 11, 109, 14);
 		contentPane.add(LABELboton1);
 		
-		JButton BOTON2 = new JButton("Click aqui >>");
-		BOTON2.setBounds(277, 127, 109, 23);
+		
+		
+		JButton BOTON2 = new JButton("<< Click aqui");
+		BOTON2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//si apreto el boton con el Jlabel "Me llevo a la izquierda" lo pasara a la caja de la izquierda
+				TextoIzquierda.setText(TextoDerecha.getText());	
+				// con este comando cuando lo pase a la caja de la izquierda borrara el texto de la derecha para que solo lo presente en el texto izquierdo
+				TextoDerecha.setText("");
+				
+			}
+		});
+		//Boton y sus medidas
+		BOTON2.setBounds(158, 139, 109, 23);
 		contentPane.add(BOTON2);
 		
-		JLabel LABELboton2 = new JLabel("me llevo el texto al 3");
-		LABELboton2.setBounds(277, 114, 137, 14);
+		JLabel LABELboton2 = new JLabel("Me llevo a la izquierda");
+		LABELboton2.setBounds(158, 126, 137, 14);
 		contentPane.add(LABELboton2);
-		
-		JButton BOTON3 = new JButton("Click aqui >>");
-		BOTON3.setBounds(470, 171, 109, 23);
-		contentPane.add(BOTON3);
-		
-		JLabel LABELboton3 = new JLabel("Me lo llevo al 1 de nuevo");
-		LABELboton3.setBounds(470, 159, 137, 14);
-		contentPane.add(LABELboton3);
 	}
 }

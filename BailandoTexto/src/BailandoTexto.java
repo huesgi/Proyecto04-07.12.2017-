@@ -37,7 +37,7 @@ public class BailandoTexto extends JFrame {
 	 */
 	public BailandoTexto() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 499, 277);
+		setBounds(100, 100, 518, 277);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -67,7 +67,7 @@ public class BailandoTexto extends JFrame {
 		//le he colocado un Jlabel como titulo de la "caja"
 		JLabel LABELTextoDerecha = new JLabel("Texto Derecha");
 		//Medidas del titulo de la "caja"
-		LABELTextoDerecha.setBounds(311, 64, 78, 14);
+		LABELTextoDerecha.setBounds(311, 64, 93, 14);
 		contentPane.add(LABELTextoDerecha);
 		
 		JButton BOTON1 = new JButton("Click aqui >>");
@@ -106,5 +106,19 @@ public class BailandoTexto extends JFrame {
 		JLabel LABELboton2 = new JLabel("Me llevo a la izquierda");
 		LABELboton2.setBounds(158, 126, 137, 14);
 		contentPane.add(LABELboton2);
+		
+		JButton BOTONBORRAR = new JButton("Borrar");
+		BOTONBORRAR.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			TextoDerecha.setText("");
+			TextoIzquierda.setText("");
+			}
+		});
+		BOTONBORRAR.setBounds(384, 193, 97, 23);
+		contentPane.add(BOTONBORRAR);
+		
+		JLabel lblNewLabel = new JLabel("Borrar textos");
+		lblNewLabel.setBounds(395, 179, 97, 14);
+		contentPane.add(lblNewLabel);
 	}
 }

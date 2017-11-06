@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class BailandoTexto extends JFrame {
 
@@ -71,6 +72,7 @@ public class BailandoTexto extends JFrame {
 		contentPane.add(LABELTextoDerecha);
 		
 		JButton BOTON1 = new JButton("Click aqui >>");
+		BOTON1.setForeground(Color.BLUE);
 		BOTON1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//si apreto el boton con el Jlabel "Me llevo a la derecha" lo pasara a la caja de la derecha
@@ -90,6 +92,7 @@ public class BailandoTexto extends JFrame {
 		
 		
 		JButton BOTON2 = new JButton("<< Click aqui");
+		BOTON2.setForeground(Color.BLUE);
 		BOTON2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//si apreto el boton con el Jlabel "Me llevo a la izquierda" lo pasara a la caja de la izquierda

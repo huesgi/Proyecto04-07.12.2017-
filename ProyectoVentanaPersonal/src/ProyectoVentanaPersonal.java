@@ -50,11 +50,9 @@ public class ProyectoVentanaPersonal extends JFrame {
 		
 		
 		CajaNombre = new JTextField();
-		CajaNombre.setEditable(false);						//aqui indicamos que la caja NO SERA EDITABLE cuando genere la ventana
 		CajaNombre.setText("Hugo");							//el Texto introducido en la caja			
 		CajaNombre.setBounds(10, 51, 86, 20);
-		
-		contentPane.add(CajaNombre);
+		contentPane.add(CajaNombre);						//Nombre de la caja
 		CajaNombre.setColumns(10);
 		
 		//nuestra caja donde contiene los APELLIDOS
@@ -63,11 +61,10 @@ public class ProyectoVentanaPersonal extends JFrame {
 		contentPane.add(TituloeApellidos);
 		
 		CajaApellido = new JTextField();
-		CajaApellido.setEditable(false);					//aqui indicamos que la caja NO SERA EDITABLE cuando genere la ventana
 		CajaApellido.setText("Espejel Gil");				//el Texto introducido en la caja
 		CajaApellido.setColumns(10);
 		CajaApellido.setBounds(10, 114, 86, 20);
-		contentPane.add(CajaApellido);
+		contentPane.add(CajaApellido);						//Nombre de la caja
 		
 		
 		//nuestra caja donde contiene los EDAD
@@ -76,11 +73,10 @@ public class ProyectoVentanaPersonal extends JFrame {
 		contentPane.add(TituloeEdad);
 		
 		CajaEdad = new JTextField();
-		CajaEdad.setEditable(false);						//aqui indicamos que la caja NO SERA EDITABLE cuando genere la ventana
 		CajaEdad.setText("30");								//el Texto introducido en la caja
 		CajaEdad.setColumns(10);
 		CajaEdad.setBounds(10, 180, 86, 20);
-		contentPane.add(CajaEdad);
+		contentPane.add(CajaEdad);							//Nombre de la caja
 		
 		
 		//nuestra caja donde contiene el eMail
@@ -89,7 +85,6 @@ public class ProyectoVentanaPersonal extends JFrame {
 		contentPane.add(TituloeMail);
 		
 		CajaEmail = new JTextField();
-		CajaEmail.setEditable(false);						//aqui indicamos que la caja NO SERA EDITABLE cuando genere la ventanas
 		CajaEmail.setText("hugo86job@gmail.com");			//el Texto introducido en la caja
 		CajaEmail.setColumns(10);
 		CajaEmail.setBounds(10, 247, 138, 20);

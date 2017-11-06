@@ -40,6 +40,8 @@ public class BailandoTexto extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 518, 277);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.LIGHT_GRAY);
+		contentPane.setForeground(Color.LIGHT_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -92,7 +94,8 @@ public class BailandoTexto extends JFrame {
 		
 		
 		JButton BOTON2 = new JButton("<< Click aqui");
-		BOTON2.setForeground(Color.BLUE);
+		BOTON2.setBackground(Color.BLUE);
+		BOTON2.setForeground(Color.WHITE);
 		BOTON2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//si apreto el boton con el Jlabel "Me llevo a la izquierda" lo pasara a la caja de la izquierda
@@ -111,6 +114,7 @@ public class BailandoTexto extends JFrame {
 		contentPane.add(LABELboton2);
 		
 		JButton BOTONBORRAR = new JButton("Borrar");
+		BOTONBORRAR.setBackground(Color.RED);
 		BOTONBORRAR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			TextoDerecha.setText("");

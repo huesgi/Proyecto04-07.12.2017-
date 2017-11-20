@@ -25,7 +25,7 @@ public class VentanaPrincipal extends JFrame {
 		//aqui cojo lo programado en el proyecto JUGADOR y definido como "SegundoApellido"
 		playerOne.setSegundoApellido("Gil");
 		//aqui cojo lo programado en el proyecto JUGADOR y definido como "Edad"
-		playerOne.setEdad(31);
+		playerOne.setEdad(15);
 		System.out.println(playerOne.toString());
 		
 		

@@ -93,7 +93,14 @@ public class Jugador {
 	 * aqui cuando en la ventanaPrincipal solicitemos EDAD sacara el indicado entre parentesis pero va con int por ser un numero
 	 */
 	public void setEdad(int edad) {
-		this.edad = edad;
+		//aqui ponemos el condicionante para que la edad sea comprendida entre 18 años (mayoria de edad) y 99
+		if(edad<18){
+			this.edad=18;
+		}else if(edad>99){
+			this.edad=99;
+		}else{	
+			this.edad = edad;
+		}
 	}
 
 

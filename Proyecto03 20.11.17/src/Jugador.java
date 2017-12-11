@@ -12,6 +12,7 @@ public class Jugador {
 	private int identificacionNumerica;
 	
 	
+	
 	/*constructor de la clase*/
 	public Jugador() {
 		// TODO Auto-generated constructor stub
@@ -94,10 +95,10 @@ public class Jugador {
 	 */
 	public void setEdad(int edad) {
 		//aqui ponemos el condicionante para que la edad sea comprendida entre 18 años (mayoria de edad) y 99
-		if(edad<18){
-			this.edad=18;
-		}else if(edad>99){
-			this.edad=99;
+		if(edad<18){			//si la edad es inferior a 18....
+			this.edad=18;		// ..... 18 mostraremos
+		}else if(edad>99){		// si la edad es superior a 99....
+			this.edad=99;		// .....mostraremos solo el 99
 		}else{	
 			this.edad = edad;
 		}

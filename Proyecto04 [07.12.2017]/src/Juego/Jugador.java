@@ -1,3 +1,4 @@
+package Juego;
 //package juego;
 
 public class Jugador {

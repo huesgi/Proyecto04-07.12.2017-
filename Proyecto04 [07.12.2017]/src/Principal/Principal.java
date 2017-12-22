@@ -1,3 +1,4 @@
+package Principal;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionListener;
@@ -5,12 +6,16 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Juego.Jugador;
+
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import java.awt.Color;
 
 public class Principal extends JFrame {
 
@@ -55,12 +60,15 @@ public class Principal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 378);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.GRAY);
+		contentPane.setForeground(Color.GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
 		// etiqueta DATOS DEL JUGADOR
 		JLabel lblNewLabelDatosDelJugador = new JLabel("Datos del Jugador");
+		lblNewLabelDatosDelJugador.setBackground(Color.PINK);
 		lblNewLabelDatosDelJugador.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblNewLabelDatosDelJugador.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabelDatosDelJugador.setBounds(30, 11, 371, 28);
@@ -68,21 +76,25 @@ public class Principal extends JFrame {
 
 		// Etiqueta del NOMBRE
 		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNombre.setBounds(30, 50, 80, 14);
 		contentPane.add(lblNombre);
 
 		// Etiqueta del APELLIDO1
 		JLabel lblApellido1 = new JLabel("Apellido 1");
+		lblApellido1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblApellido1.setBounds(30, 83, 80, 14);
 		contentPane.add(lblApellido1);
 
 		// Etiqueta del APELLIDO2
 		JLabel lblApellido2 = new JLabel("Apellido 2");
+		lblApellido2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblApellido2.setBounds(30, 108, 80, 14);
 		contentPane.add(lblApellido2);
 
 		// Etiqueta de la EDAD
 		JLabel lblEdad = new JLabel("edad");
+		lblEdad.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblEdad.setBounds(30, 164, 80, 14);
 		contentPane.add(lblEdad);
 
@@ -123,6 +135,7 @@ public class Principal extends JFrame {
 		});
 
 		textFieldInformacion = new JTextField();
+		textFieldInformacion.setBackground(Color.PINK);
 		textFieldInformacion.setBounds(30, 228, 371, 58);
 		getContentPane().add(textFieldInformacion);
 		textFieldInformacion.setColumns(10);
@@ -148,6 +161,7 @@ public class Principal extends JFrame {
 		
 		// Caracateristicas del BOTON
 		JButton btnNewButton = new JButton("A JUGAR");
+		btnNewButton.setBackground(Color.CYAN);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 

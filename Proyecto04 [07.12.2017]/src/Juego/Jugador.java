@@ -90,11 +90,14 @@ public class Jugador {
 	}
 
 	
-	public boolean isNumeric(String cadena) {
-		try {
-			Integer.parseInt(cadena);
-			return true;
-		} catch (NumberFormatException nfe) {
+	// con esta comparativa comprobamos si es numerico una cadena de texto. 
+	//Es la deficion del metodo
+	// metodo (definido por nosotros) como "inNumeric"  
+	public static boolean isNumeric(String cadena) {
+		try {											//try es un "intenta hacer esto"
+			Integer.parseInt(cadena);					//coge una cadena de texto e intenta convertira la un numero ENTERO (sin decimales)
+			return true;								//comprobamos si es correcto
+		} catch (NumberFormatException nfe) {			//sino lo es interceptarlo y hace una excepcion
 			return false;
 			
 		}
@@ -118,6 +121,23 @@ public class Jugador {
 	
 	
 	
+	// le estamos enseñando a la clase JUGADOR como comprobar si la edad es valida
+	// Creamos un metodo BOOLEAN indicando el metodo (definido por nosotros) como "isValidEdad" indicando que es un Int llamado "numero"
+	public static boolean isValidEdad(int numero) {
+		
+		if (numero >18 && numero <99) {					//con el concepto "numero" le indicamos que si "numero" es mayor que 18 y menor que 99
+		return true;									//nos devuelva como VERDADERO
+		}
+		else {											//pero por lo contrario automaticamente si no son estas normas
+		return false;									//nos devuelva como INCORRECTO
+		}
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 	
